@@ -1,3 +1,4 @@
+import 'package:expense_planner/widgets/user_transactions.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -25,19 +26,22 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Flutter App'),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Container(
-            width: double.infinity,
-            child: Card(
-              color: Colors.blue,
-              child: Text("CHART !"),
-              elevation: 5,
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Container(
+              width: double.infinity,
+              child: Card(
+                color: Colors.blue,
+                child: Text("CHART !"),
+                elevation: 5,
+              ),
             ),
-          ),
-        ],
+            UserTransactions()
+          ],
+        ),
       ),
     );
   }
